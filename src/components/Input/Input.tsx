@@ -1,7 +1,28 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import './styles.css'
-function Input() {
-    return <input className="input-name" name="user_name" placeholder="Enter your name" /> 
+import { InputProps } from './types';
+function Input({
+    placeholder, 
+    name, 
+    value, 
+    type='text', 
+    onChange, 
+    label, 
+    id
+} : InputProps) {
+    return (
+    <div className='input-container'>
+    <label htmlFor={id}>{label}</label>
+    <input 
+    className="input-component" 
+    name={name}
+    placeholder={placeholder}
+    value={value}
+    onChange={onChange}
+    type={type}
+    id={id} /> 
+    </div>
+    )
 }
 
 export default Input;
