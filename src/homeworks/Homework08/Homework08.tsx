@@ -16,7 +16,7 @@ function Homework08() {
   }
 
   let nameButton = 'SHOW PASSWORD';
-  showUserPassword? nameButton = 'HIDE PASSWORD' : 'SHOW PASSWORD';
+  showUserPassword? nameButton = 'HIDE PASSWORD': false;
 
   return (
     <div className="hw08-container">
