@@ -1,0 +1,10 @@
+.lesson08-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+  padding: 40px;
+  background-color: rgb(253, 254, 255);
+}

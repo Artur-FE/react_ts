@@ -1,7 +1,19 @@
-.product-cards-wrapper{
+.homework07-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+    padding: 40px;
+    background-color: aliceblue;
+}
+
+
+
+/*.product-cards-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
     margin-top: 20px;
-}
+}*/
