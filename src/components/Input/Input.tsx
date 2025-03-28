@@ -12,7 +12,7 @@ function Input({
 } : InputProps) {
     return (
     <div className='input-container'>
-    <label htmlFor={id}>{label}</label>
+    <label className='label-input' htmlFor={id}>{label}</label>
     <input 
     className="input-component" 
     name={name}
