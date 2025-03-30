@@ -1,4 +1,23 @@
-.hw08-container {
+.homework08-container{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+    padding: 40px;
+    background-color: rgb(203, 188, 219);
+}
+
+.result-container {
+
+   font-size: 24px;
+   font-weight: bold;
+   color: rgb(46, 46, 75);
+
+}
+
+
+/*.hw08-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,4 +36,4 @@
     text-align: center;
     margin-bottom: 20px;
  }
-  
+  */
