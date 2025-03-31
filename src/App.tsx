@@ -1,3 +1,4 @@
+import Homework10 from "./homeworks/Homework10/Homework10"
 import GlobalStyles from "./styles/GlobalStyles"
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
@@ -7,7 +8,7 @@ import GlobalStyles from "./styles/GlobalStyles"
 // import Lesson07 from "./lessons/Lesson07/Lesson07";
 // import Lesson08 from "./lessons/Lesson08/Lesson08"
 // import Lesson09 from "./lessons/Lesson09/Lesson09";
-import Lesson10 from "./lessons/Lesson10/Lesson10"
+// import Lesson10 from "./lessons/Lesson10/Lesson10"
 
 
 //Homeworks imports
@@ -31,7 +32,8 @@ function App() {
       {/* <Homework08 /> */}
       {/* <Lesson09 /> */}
       {/* <Homework09 /> */}
-      <Lesson10 />
+      {/* <Lesson10 /> */}
+      <Homework10 />
     </>
   )
 }
