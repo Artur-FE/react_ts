@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import './styles.css'
+import { InputComponent, InputContainer, Label } from './styles';
 import { InputProps } from './types';
 function Input({
     placeholder, 
@@ -8,20 +8,22 @@ function Input({
     type='text', 
     onChange, 
     label, 
-    id
+    id,
+    search
 } : InputProps) {
     return (
-    <div className='input-container'>
-    <label className='label-input' htmlFor={id}>{label}</label>
-    <input 
-    className="input-component" 
+    <InputContainer>
+    <Label htmlFor={id}>{label}</Label>
+    <InputComponent 
     name={name}
     placeholder={placeholder}
     value={value}
     onChange={onChange}
     type={type}
-    id={id} /> 
-    </div>
+    id={id} 
+    isSearch = {search}
+    /> 
+    </InputContainer>
     )
 }
 
