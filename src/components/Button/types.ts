@@ -2,7 +2,7 @@ export interface ButtonProps {
     name: string,
     onClick?: () => void,
     disabled?: boolean,
-    type?: 'submit'|'button'|'reset'
-
+    type?: 'submit'|'button'|'reset',
+    danger?: boolean
 }
 
