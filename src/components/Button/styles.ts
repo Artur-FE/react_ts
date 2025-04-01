@@ -3,11 +3,9 @@ import styled from "@emotion/styled";
 
 interface ButtonComponentStyledProps {
   isDanger?: boolean
-  disabled? : boolean
-  type? : string
 }
 
-export const MainButton = styled.div<ButtonComponentStyledProps>`
+export const MainButton = styled.button<ButtonComponentStyledProps>`
   width: 300px;
   height: fit-content;
   padding: 20px;
