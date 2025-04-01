@@ -15,10 +15,22 @@ function Button({ name, onClick, disabled=false, type='submit', danger }: Button
     onClick={onClick} 
     disabled={disabled}
     type={type}
-    isDanger={danger}>
+    danger={danger}>
       {name}
     </MainButton>
   );
 }
+
+// function Button({ name, onClick, disabled=false, type='submit', danger }: ButtonProps) {
+//   return (
+//     <MainButton 
+//     onClick={onClick} 
+//     disabled={disabled}
+//     type={type}
+//     isDanger={danger}>
+//       {name}
+//     </MainButton>
+//   );
+// }
 
 export default Button;
