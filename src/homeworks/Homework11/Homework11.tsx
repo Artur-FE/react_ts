@@ -23,14 +23,14 @@ function Homework11() {
 
   useEffect(() => {
     if (!firstRender) {
-      setResultInputValue(resultInputValue + 1);
+      setResultInputValue((prev)=>prev + 1);
     }
   }, [controlInputValue]);
 
   return (
     <Homework11Container>
-      <Input name="controlInput" onChange={controlInputChange} />
-      <Input name="noControlInput"  onChange={noControlInputChange}/>
+      <Input name="controlInput" value={controlInputValue} onChange={controlInputChange} />
+      <Input name="noControlInput" value={nOControlInputValue} onChange={noControlInputChange}/>
       <ResultBox>
         Внесено изменений в первый Input:
         <ResultValue>{resultInputValue}</ResultValue>
