@@ -6,35 +6,37 @@ import Spinner from "../../components/Spinner/Spinner";
 
 function Homework12() {
   const [catFact, setCatFact] = useState<string | undefined>(undefined);
-  const [errorCatFact, setErrorCatFact] = useState<string | undefined >(undefined);
+  const [errorCatFact, setErrorCatFact] = useState<string | undefined>(
+    undefined
+  );
   const [isLoading, getIsLoading] = useState<boolean>(false);
   const URL_CAT_FACT = "https://catfact.ninja/fact";
   const getCatFact = async () => {
     try {
-        getIsLoading(true);
-        setCatFact(undefined)
-        setErrorCatFact(undefined)
+      getIsLoading(true);
+      setCatFact(undefined);
+      setErrorCatFact(undefined);
       const response = await axios.get(URL_CAT_FACT);
       setCatFact(response.data.fact);
-    } catch (error : any) {
-        setErrorCatFact(error.message)
+    } catch (error: any) {
+      setErrorCatFact(error.message);
     } finally {
-        getIsLoading(false);
+      getIsLoading(false);
     }
   };
 
-  useEffect(()=>{
-    getCatFact()
-  },[])
+  useEffect(() => {
+    getCatFact();
+  }, []);
 
   return (
     <Homework12Container>
-      <Button name="GET MORE FACTS" onClick={getCatFact} disabled={isLoading}/>
+      <Button name="GET MORE FACTS" onClick={getCatFact} disabled={isLoading} />
       <CatWrapper errorMessage={errorCatFact !== undefined}>
-      {isLoading && <Spinner />}
-        {errorCatFact} 
+        {isLoading && <Spinner />}
+        {errorCatFact}
         {catFact}
-        </CatWrapper>
+      </CatWrapper>
     </Homework12Container>
   );
 }

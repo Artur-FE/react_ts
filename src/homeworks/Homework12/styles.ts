@@ -29,7 +29,7 @@ background-color: rgb(255, 255, 255);
 /* background-image:  url(${CatBG}); */
 background-image:${({errorMessage}) => errorMessage? `url(${ErrorBG})` :`url(${CatBG})`};
 background-repeat: no-repeat; 
-background-position: ${({errorMessage}) => errorMessage? 'top 10px left 300px' : 'bottom 0px right -70px'};
+background-position: ${({errorMessage}) => errorMessage? 'top 30px left 300px' : 'bottom 0px right -70px'};
 box-shadow: 10px 10px 10px rgb(184, 171, 220);
 border-radius: 10px;
 font-size: 24px;
@@ -37,12 +37,3 @@ color:${({errorMessage}) => errorMessage? 'rgb(214, 37, 37);' : 'rgb(88, 41, 218
 font-weight: bold; 
 `;
 
-export const Error = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-font-size: 28px;
-color: red;
-font-weight: bold;
-`;
