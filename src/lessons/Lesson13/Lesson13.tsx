@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ChangeEvent, useEffect, useState } from "react";
 import Button from "../../components/Button/Button";
-import { DogImg, ImgWrapper, Lesson13Container } from "./styles";
+import { DogImg, ImgContainer, ImgWrapper, Lesson13Container } from "./styles";
 import Spinner from "../../components/Spinner/Spinner";
 import Input from "../../components/Input/Input";
 import { v4 } from "uuid";
@@ -47,10 +47,12 @@ function Lesson13() {
       <Input name="controlInput" value={inputValue} onChange={onChangeInput} />
 
       <ImgWrapper>
-        {isLoading && <Spinner />}
+      <ImgContainer>
+      {isLoading && <Spinner />}
         {/* <DogImg src={urlImg} /> */}
         {urlFromArrayValue}
         {errorImg}
+        </ImgContainer>
       </ImgWrapper>
       {arrayValue.length !== 0 && (
         <Button name="DELETE ALL DATA" onClick={() => setArrayValue([])} />
