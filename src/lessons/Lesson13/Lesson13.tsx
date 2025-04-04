@@ -12,7 +12,7 @@ function Lesson13() {
   const [errorImg, setErrorImg] = useState<string | undefined>(undefined);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string | undefined>(undefined);
-  const [arrayValue, setArrayValue] = useState<any>([]);
+  const [arrayValue, setArrayValue] = useState<string[]>([]);
 
   const getImg = async () => {
     try {
@@ -37,7 +37,7 @@ function Lesson13() {
     getImg();
   }, [, inputValue]);
 
-  const urlFromArrayValue = arrayValue.map((element: any) => (
+  const urlFromArrayValue = arrayValue.map((element: string) => (
     <DogImg src={element} key={v4()} />
   ));
 
