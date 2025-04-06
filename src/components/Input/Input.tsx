@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { InputComponent, InputContainer, Label } from './styles';
+import { ErrorMessage, InputComponent, InputContainer, Label } from './styles';
 import { InputProps } from './types';
 function Input({
     placeholder, 
@@ -9,7 +9,8 @@ function Input({
     onChange, 
     label, 
     id,
-    search
+    search,
+    error
 } : InputProps) {
     return (
     <InputContainer>
@@ -23,6 +24,7 @@ function Input({
     id={id} 
     isSearch = {search}
     /> 
+    <ErrorMessage>{error}</ErrorMessage>
     </InputContainer>
     )
 }
