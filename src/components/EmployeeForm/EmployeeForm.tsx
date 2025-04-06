@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
-import { CheckBox, EmployeeFormComponent, EmployeeFormWrapper, Title } from "./styles";
+import { EmployeeFormComponent, EmployeeFormWrapper, Title } from "./styles";
 import { EmployeeFormValues } from "./types";
 
 function EmployeeForm() {
