@@ -4,7 +4,7 @@ export interface InputProps {
     placeholder?: string, 
     name: string, 
     value?: string, 
-    type?: 'text'|'email'|'number'|'password'|'tel', 
+    type?: 'text'|'email'|'number'|'password'|'tel'|'checkbox', 
     onChange?: (event: ChangeEvent<HTMLInputElement>) => void, 
     label?: string, 
     id?: string
