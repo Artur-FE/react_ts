@@ -12,6 +12,7 @@ function EmployeeForm() {
       .max(50, "Max 50 symbols")
       .min(5, "Min 5 symbols"),
     age: Yup.number()
+    .typeError('Age must be a number')
       .required("Enter your age")
       .min(18, "Min  18 years")
       .max(80, "Max 80 years"),
@@ -61,6 +62,7 @@ function EmployeeForm() {
         <Input
           name="checkBox"
           type="checkbox"
+          checked={formik.values.checkBox}
           label="I have read the terms of use *"
           onChange={formik.handleChange}
           error={formik.errors.checkBox}
