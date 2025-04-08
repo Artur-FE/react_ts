@@ -1,5 +1,6 @@
 
 import GlobalStyles from "./styles/GlobalStyles"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 //Lessons imports
@@ -15,6 +16,11 @@ import GlobalStyles from "./styles/GlobalStyles"
 // import Lesson14 from "./lessons/Lesson14/Lesson14"
 
 
+import Layout from "./components/Layout/Layout"
+import Home from "./pages/Home/Home"
+import About from "./pages/About/About"
+
+
 //Homeworks imports
 // import Homework06 from "./homeworks/Homework06";
 // import Homeworks07 from "./homeworks/Homework07/Homework07";
@@ -24,15 +30,27 @@ import GlobalStyles from "./styles/GlobalStyles"
 // import Homework11 from "./homeworks/Homework11/Homework11"
 // import Homework12 from "./homeworks/Homework12/Homework12"
 // import Homework14 from "./homeworks/Homework14/Homework14"
-import Homework15 from "./homeworks/Homework15/Homework15"
+// import Homework15 from "./homeworks/Homework15/Homework15"
 
 
 
 function App() {
 
   return (
-    <>
-    <GlobalStyles />
+    //BrowserRouter - глобальная обёртка для всего приложения,
+    // которая позволяет использовать маршрутизацию
+    <BrowserRouter>
+      <GlobalStyles />
+      <Layout>
+        {/* Routes - обертка, которая собирает все маршруты приложения */}
+        <Routes>
+          {/* Route - компонент библиотеки, в который передаётся маршрут и тот компонент (страницу),
+          который должен быть вызван, если выполнен переход по этому маршруту */}
+          <Route path='/' element={<Home />}/>
+          <Route path='/about' element={<About />}/>
+        </Routes>
+      </Layout>
+    
       {/* <Lesson06/> */}
       {/* <Homework06 /> */}
       {/* <Lesson07/> */}
@@ -50,8 +68,9 @@ function App() {
       {/* <Lesson13 /> */}
       {/* <Lesson14 /> */}
       {/* <Homework14 /> */}
-      <Homework15/>
-    </>
+      {/* <Homework15/> */}
+      </BrowserRouter>
+
   )
 }
 
