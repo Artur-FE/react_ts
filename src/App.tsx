@@ -19,6 +19,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Layout from "./components/Layout/Layout"
 import Home from "./pages/Home/Home"
 import About from "./pages/About/About"
+import Course from "./pages/Course/Course"
 
 
 //Homeworks imports
@@ -47,6 +48,7 @@ function App() {
           {/* Route - компонент библиотеки, в который передаётся маршрут и тот компонент (страницу),
           который должен быть вызван, если выполнен переход по этому маршруту */}
           <Route path='/' element={<Home />}/>
+          <Route path='/course' element={<Course />}/>
           <Route path='/about' element={<About />}/>
         </Routes>
       </Layout>
