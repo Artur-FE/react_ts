@@ -8,6 +8,7 @@ display: flex;
   justify-content: center;
   flex: 1;
   padding: 60px;
+  gap: 16px;
   background-color: rgb(197, 238, 233);
 `;
 
@@ -20,7 +21,12 @@ color: #3b2c3b
 export const Ul = styled.ul`
 `;
 
-export const Li = styled.li`
+export const ListItem = styled.div`
 font-size: 20px;
 color: #3b2c3b
 `;
+
+/* export const Li = styled.li`
+font-size: 20px;
+color: #3b2c3b
+`; */

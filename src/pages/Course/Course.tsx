@@ -1,11 +1,18 @@
-import { CourseWrapper, Title, Li, Ul } from "./styles";
+import { CourseWrapper, Title, ListItem } from "./styles";
+import { lessonsData } from "./data";
+import { v4 } from "uuid";
 
 
 function Course() {
+const lessons = lessonsData.map((lesson:string)=> {
+    return <ListItem key={v4()}>{lesson}</ListItem>
+})
+
     return(
         <CourseWrapper>
             <Title>React Lessons</Title>
-            <Ul>
+            {lessons}
+            {/* <Ul>
             <Li>Props_and_State</Li>
             <Li>Object_Types,_export,_import</Li>
             <Li>Controlled_and_uncontrolled_components</Li>
@@ -16,7 +23,7 @@ function Course() {
             <Li>server_requests,_axios</Li>
             <Li>Formik,_Yup</Li>
             <Li>Routing</Li>
-            </Ul>
+            </Ul> */}
         </CourseWrapper>
     )
 }
