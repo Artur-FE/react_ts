@@ -24,6 +24,10 @@ import Users from "./pages/Users/Users"
 import Designer from "./pages/Users/components/Designer/Designer"
 import Manager from "./pages/Users/components/Manager/Manager"
 import PageNotFound from "./pages/PageNotFound/PageNotFound"
+import Clients from "./pages/Clients/Clients"
+import Mercedes from "./pages/Clients/components/Mercedes/Mercedes"
+import Audi from "./pages/Clients/components/Audi/Audi"
+import Volkswagen from "./pages/Clients/components/Volkswagen/Volkswagen"
 
 
 //Homeworks imports
@@ -53,8 +57,12 @@ function App() {
           который должен быть вызван, если выполнен переход по этому маршруту */}
           <Route path='/' element={<Home />}/>
           <Route path='/course' element={<Course />}/>
+          <Route path='/clients' element={<Clients />}/>
           <Route path='/about' element={<About />}/>
           <Route path='/users' element={<Users />}/>
+          <Route path='/clients/mercedes' element={<Mercedes />}/>
+          <Route path='/clients/audi' element={<Audi />}/>
+          <Route path='/clients/volkswagen' element={<Volkswagen />}/>
           <Route path="/users/designer" element={<Designer />} />
           <Route path="/users/manager" element={<Manager />} />
           <Route path="*" element={<PageNotFound />} />
