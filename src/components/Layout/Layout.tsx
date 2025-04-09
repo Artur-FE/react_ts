@@ -12,6 +12,7 @@ function Layout({children} : LayoutProps) {
                 {/* NavLink - компонент библиотеки, который добавляет ссылку на 
           страницу по маршруту через prop to */}
           <NavLink to='/'>Home</NavLink>
+          <NavLink to='/course'>Course</NavLink>
           <NavLink to='/about'>About</NavLink>
             </Nav>
            </Header>
