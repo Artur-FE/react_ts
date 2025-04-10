@@ -29,6 +29,7 @@ import Mercedes from "./pages/Clients/components/Mercedes/Mercedes"
 import Audi from "./pages/Clients/components/Audi/Audi"
 import Volkswagen from "./pages/Clients/components/Volkswagen/Volkswagen"
 import Lesson18 from "./lessons/Lesson18/Lesson18"
+import Homework18 from "./homeworks/Homework18/Homework18"
 
 
 //Homeworks imports
@@ -67,6 +68,7 @@ function App() {
           <Route path="/users/designer" element={<Designer />} />
           <Route path="/users/manager" element={<Manager />} />
           <Route path="/lesson18" element={<Lesson18 />} />
+          <Route path="/homework18" element={<Homework18 />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>
